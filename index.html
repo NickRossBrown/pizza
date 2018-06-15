@@ -8,22 +8,22 @@
     <title>Pizza Order</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container card">
       <header>
         <h1>Order Your Pizaa Here </h1>
       </header>
       <form class="pizzaMenu">
 
-        <div class="form-group">
+        <div class="form-group card">
           <label for="inputName" placeholder=" Enter Name Here">Enter Your Name</label>
           <input type="text" class="form-control" id="inputName"></input>
         </div>
 
 
-        <div class="form-group">
+        <div class="form-group card">
           <label for="pizzaSize">Pick your Pizza Size</label>
             <select class="form-control" id= "pizzaSize">
-              <option value="1">Choose a Pizza Size</option>
+              <option value="" selected disable hidden></option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
@@ -33,9 +33,9 @@
         </div>
 
         <div class="form-group">
-          <label for="pizzaSauce">Pick your Pizza Style</label>
+          <label for="pizzaSauce">Pick your Pizza Sauce</label>
             <select class="form-control" id= "pizzaSauce">
-              <option value="1">1</option>
+              <option value="" selected disable hidden></option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
@@ -44,10 +44,10 @@
             </select>
         </div>
 
-        <div class="form-group">
-          <label for="pizzaToppings">Pick your Pizza Style</label>
+        <div class="form-group card">
+          <label for="pizzaToppings">Pick your Pizza toppings</label>
             <select class="form-control" id= "pizzaToppings">
-              <option value="1">1</option>
+              <option value="" selected disable hidden></option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
@@ -56,10 +56,10 @@
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group card">
           <label for="pizzaStyle">Pick your Pizza Style</label>
             <select class="form-control" id= "pizzaStyle">
-              <option value="1">1</option>
+              <option value="" selected disable hidden></option>
               <option value="2">2</option>
               <option value="3">3</option>
               <option value="4">4</option>
@@ -68,11 +68,11 @@
             </select>
         </div>
 
-        <button type="btn" class=" btn form-control" id="submitButton">Enter your order</button>
+        <button type="btn" class="btn form-control card" id="submitButton">Enter your order</button>
       </form>
 
 
-      <div class="form-control" id="receipt">
+      <div class="form-control card" id="receipt">
         <h3>Your Order</h3>
         <h4 id="pizzaType"></h4>
         <ul class="custom">
