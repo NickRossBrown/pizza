@@ -12,79 +12,72 @@
       <header>
         <h1>Order Your Pizaa Here </h1>
       </header>
+      <form class="pizzaMenu">
 
-      <div class="form-group">
-        <label for="inputName">Enter Your Name</label>
-        <input type="text" class="form-control" id="inputName">
-
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group" id= "pizzaStyle">
-            <label for="pizzaStyles">Pick your Pizza Style</label>
-              <select class="form-control" id= "pizzaStyle">
-                <option value="1">Choose a Pizza Style</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
-          </div>
-
-          <div class="form-group" id= "pizzaStyle">
-            <label for="pizzaStyles">Pick your Pizza Style</label>
-              <select class="form-control" id= "pizzaStyle">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
-          </div>
-
-          <div class="form-group" id= "pizzaStyle">
-            <label for="pizzaStyles">Pick your Pizza Style</label>
-              <select class="form-control" id= "pizzaStyle">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
-          </div>
-
-          <div class="form-group" id= "pizzaStyle">
-            <label for="pizzaStyles">Pick your Pizza Style</label>
-              <select class="form-control" id= "pizzaStyle">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
-          </div>
-
-          <button type="btn" id="submitButton">Enter your order</button>
-
-          <div class="form-control" id="receipt">
-            <h3>Your Order</h3>
-            <ul id=custom>
-
-            </ul>
-
-          </div>
+        <div class="form-group">
+          <label for="inputName" placeholder=" Enter Name Here">Enter Your Name</label>
+          <input type="text" class="form-control" id="inputName"></input>
         </div>
+
+
+        <div class="form-group">
+          <label for="pizzaSize">Pick your Pizza Size</label>
+            <select class="form-control" id= "pizzaSize">
+              <option value="1">Choose a Pizza Size</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+          <label for="pizzaSauce">Pick your Pizza Style</label>
+            <select class="form-control" id= "pizzaSauce">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+          <label for="pizzaToppings">Pick your Pizza Style</label>
+            <select class="form-control" id= "pizzaToppings">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+          <label for="pizzaStyle">Pick your Pizza Style</label>
+            <select class="form-control" id= "pizzaStyle">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+        </div>
+
+        <button type="btn" class=" btn form-control" id="submitButton">Enter your order</button>
+      </form>
+
+
+      <div class="form-control" id="receipt">
+        <h3>Your Order</h3>
+        <h4 id="pizzaType"></h4>
+        <ul class="custom">
+        </ul>
       </div>
-
-
-
-
-
 
     </div>
   </body>

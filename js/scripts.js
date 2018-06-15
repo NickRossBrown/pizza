@@ -1,8 +1,8 @@
-function Pizza(name,style,sauce,toppings){
+function Pizza(name,size){
   this.name = name;
-  this.styles = style;
-  this.sauce = sauce;
-  this.toppings = toppings
+  this.size = size;
+  // this.sauce = sauce;
+  // this.toppings = toppings
 }
 
 Pizza.prototype.addCustomSauce = function () {
@@ -21,14 +21,14 @@ Pizza.prototype.addCustomSauce = function () {
 
 
 $(document).ready(function() {
-  $(#submitButton).submit(function(event){
+  $("form.pizzaMenu").submit(function(event){
     event.preventDefault();
-    var  inputtedName = $("#inputName").val();
-    var inputtedPizzaStyle = $("#pizzaStyle").val();
+    var inputtedName = $("#inputName").val();
+    var inputtedSize= $("#pizzaSize").val();
 
-    var pizzaOrder = new Pizza(inputtedName,style)
+    var pizzaOrder = new Pizza(inputtedName,inputtedSize)
     $("#receipt").show();
-    $(".custom").append("<li> class='custom'" + pizza.Order.style + "</l1>")
+    $(".custom").append("<li class='custom'>" + pizzaOrder.style + "</l1>")
 
   });
 
