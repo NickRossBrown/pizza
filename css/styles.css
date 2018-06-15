@@ -13,7 +13,12 @@ body {
 }
 #receipt {
   display: none;
+  background-color: lightblue;
 }
 #submitButton {
   background-color: pink;
 }
+ .moveRight{
+   float: right;
+
+ }
