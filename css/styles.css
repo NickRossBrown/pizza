@@ -1,6 +1,19 @@
+
+body {
+  background: radial-gradient(yellow 25%, pink);
+}
+.container{
+}
+ #name{
+   background-color: grey;
+ }
+
+.option{
+  background-color: lightgrey;
+}
 #receipt {
   display: none;
-  
-
-
+}
+#submitButton {
+  background-color: pink;
 }
