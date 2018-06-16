@@ -31,7 +31,7 @@ PizzaOrder.prototype.addCustomSauceCost = function () {
 };
 
 PizzaOrder.prototype.addStyleCost = function () {
-  this.styleCost  = [["standard",0],["thick crust",2],["Thin crust",1.5],["deep fried",3]["Pan",.75]]
+  this.styleCost  = [["standard",0],["thick crust",2],["Thin crust",1.5],["deep fried",3],["Pan",.75]]
 };
 
 PizzaOrder.prototype.addToppingsCost = function () {
@@ -93,15 +93,17 @@ function findSauceCost(){
 }
 function findToppingsCost(){
   var pizza = new PizzaOrder ("NAME")
-  pizza.addToppingsCost()
+  pizza.addToppingsCost();
   pizza.addCustomToppings();
-  var total = 0
-  console.log(pizza.toppingsCost+"WWWWWWWWWW"+pizza.customToppings)
+    // this.customToppings = $("#pizzaToppings").val();
+    // this.toppingsCost  = [["Cheese only",0],["extra cheese",2],[
+  var total = 0;
+  console.log(pizza.toppingsCost+"WWWWWWWWWW"+pizza.customToppings);
   if (pizza.hasOwnProperty("customToppings") !== null){
     for (i=0; i < pizza.toppingsCost.length ;i++){
       if (pizza.customToppings === pizza.toppingsCost[i][0]){
-        total+=pizza.toppingsCost[i][1]
-        return pizza.toppingsCost[i][1]
+        total+=pizza.toppingsCost[i][1];
+        return pizza.toppingsCost[i][1];
       }
     }
   } else{
