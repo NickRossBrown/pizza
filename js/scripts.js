@@ -1,5 +1,6 @@
-function PizzaOrder(name){
+function PizzaOrder(name,sauce){
   this.name = name;
+  this.sauce = {Standardtomatosauce: 0, extratomato:1,whitegarlic:2.5,bbq:1.25, hotSauce:3,noSauce:-2 }
   // this.sauce = sauce;
   // this.toppings = toppings
 }
@@ -21,6 +22,14 @@ PizzaOrder.prototype.addCustomStyle = function () {
   this.customStyle = $("#pizzaStyle").val();
 
 };
+
+var toppings = {
+  personal: 5,
+  small : 7,
+  medium :10,
+  large :14,
+  Xlarge :21
+}
 
 PizzaOrder.prototype.addSizeCost = function () {
   this.sizeCost  = [["personal",5],["small",7],["medium",10],["large",14],["Xlarge",21]]
