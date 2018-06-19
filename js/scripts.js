@@ -1,6 +1,11 @@
-function PizzaOrder(name,sauce){
+function PizzaOrder(name, size, toppings, sauce, style, saucePrice, toppingsPrice){
   this.name = name;
-  this.sauce = {Standardtomatosauce: 0, extratomato:1,whitegarlic:2.5,bbq:1.25, hotSauce:3,noSauce:-2 }
+  this.size = size;
+  this.sauce = sauce;
+  this.toppings = toppings;
+  this.style = style;
+  this.saucePrice = {Standardtomatosauce: 0, extratomato:1,whitegarlic:2.5,bbq:1.25, hotSauce:3,noSauce:-2 }
+  this.toppingsPrice = {personal: 5, small : 7, medium :10,large :14, Xlarge :21}
   // this.sauce = sauce;
   // this.toppings = toppings
 }
@@ -23,13 +28,6 @@ PizzaOrder.prototype.addCustomStyle = function () {
 
 };
 
-var toppings = {
-  personal: 5,
-  small : 7,
-  medium :10,
-  large :14,
-  Xlarge :21
-}
 
 PizzaOrder.prototype.addSizeCost = function () {
   this.sizeCost  = [["personal",5],["small",7],["medium",10],["large",14],["Xlarge",21]]
