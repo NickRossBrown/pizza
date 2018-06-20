@@ -157,8 +157,12 @@ $(document).ready(function() {
 
 
     $("#receipt").show();
+    $("#submitButton").hide();
     $(".custom").append("<h4 class='custom'>" +"Thank you  "+ pizza.name + "</h4>"+"<p>" + pizza.style +"<span class='moveRight'>"+ style+ "</span></p>" +"<p>"+ pizza.size +"<span class='moveRight'>"+ size +"</span></p>"+"<p>" + pizza.toppings +"<span class='moveRight'>"+ topping + "</span></p>" +"<p>"+ pizza.sauce+"<span class='moveRight'>"+sauce+ "</span></p>"+"<p>"+ "Total"+"<span class='moveRight'>"+totalPrice+ "</span></p>")
     // $(".custom").append("<p>" + pizza.customStyle + "</p>")
+    $(".restartWebpage").click(function() {
+    location.reload();
+    })
 
   });
 });
