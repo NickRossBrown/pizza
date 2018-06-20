@@ -4,12 +4,6 @@ function PizzaOrder(name, size, toppings, sauce, style){
   this.sauce = sauce;
   this.toppings = toppings;
   this.style = style;
-  // this.sizePrice = {personal:5,small:7,medium:10,large:14,Xlarge:21 }
-  // this.stylePrice = {standard:0, thickcrust:2, thincrust:1.5, deepfried:3, pan:.75 }
-  // this.saucePrice = {Standardtomatosauce: 0, extratomato:1,whitegarlic:2.5,bbq:1.25, hotSauce:3,noSauce:-2 }
-  // this.toppingsPrice = {personal: 5, small : 7, medium :10,large :14, Xlarge :21}
-  // this.sauce = sauce;
-  // this.toppings = toppings
 }
  PizzaOrder.prototype.findPrice = function (extra, extraPrice) {
    console.log(extra)
@@ -18,10 +12,6 @@ function PizzaOrder(name, size, toppings, sauce, style){
    return extraPrice[extra]
 
  }
-
-
-
-
 
 PizzaOrder.prototype.addCustomSize = function () {
   this.size = $("#pizzaSize").val();
@@ -50,71 +40,7 @@ PizzaOrder.prototype.addToppingsCost = function () {
   this.toppingsCost  =  {Cheeseonly:0, extracheese:2, pepproni:1.5, meatlovers:3, veggie:1, pineapple:-2}
 
 };
-// function findSizeCost(){
-//   var pizza = new PizzaOrder ("NAME")
-//   pizza.addSizeCost()
-//   pizza.addCustomSize()
-//   var total = 0
-//   if (pizza.hasOwnProperty("size") !== null){
-//     for (i=0; i < pizza.sizeCost.length ;i++){
-//       if (pizza.size === pizza.sizeCost[i][0]){
-//         total+=pizza.sizeCost[i][1]
-//         return pizza.sizeCost[i][1]
-//       }
-//     }
-//   } else{
-//       return total
-//     }
-// }
-//
-// function findStyleCost(){
-//   var pizza = new PizzaOrder ("NAME")
-//   pizza.addStyleCost()
-//   pizza.addCustomStyle();
-//   var total = 0
-//   if (pizza.hasOwnProperty("customStyle") !== null){
-//     for (i=0; i < pizza.styleCost.length ;i++){
-//       if (pizza.customStyle === pizza.styleCost[i][0]){
-//         total+=pizza.styleCost[i][1]
-//         return pizza.styleCost[i][1]
-//       }
-//     }
-//   } else{
-//       return total
-//     }
-// }
-// function findSauceCost(){
-//   var pizza = new PizzaOrder ("NAME")
-//   pizza.addCustomSauceCost()
-//   pizza.addCustomSauce();
-//   var total = 0
-//   if (pizza.hasOwnProperty("customToppings") !== null){
-//     for (i=0; i < pizza.sauceCost.length ;i++){
-//       if (pizza.customSauce === pizza.sauceCost[i][0]){
-//         total+=pizza.sauceCost[i][1]
-//         return pizza.sauceCost[i][1]
-//       }
-//     }
-//   } else{
-//       return total
-//     }
-// }
-// function findToppingsCost(){
-//   var pizza = new PizzaOrder ("NAME")
-//   pizza.addToppingsCost();
-//   pizza.addCustomToppings();
-//   var total = 0;
-//   if (pizza.hasOwnProperty("customToppings") !== null){
-//     for (i=0; i < pizza.toppingsCost.length ;i++){
-//       if (pizza.customToppings === pizza.toppingsCost[i][0]){
-//         total+=pizza.toppingsCost[i][1];
-//         return pizza.toppingsCost[i][1];
-//       }
-//     }
-//   } else{
-//       return total
-//     }
-// }
+
 
 $(document).ready(function() {
   $("form.pizzaMenu").submit(function(event){
@@ -131,12 +57,7 @@ $(document).ready(function() {
     pizza.addSauceCost();
     pizza.addToppingsCost();
     console.log(pizza.sauceCost)
-    // pizza.addCustomSauce()
-    // pizza.addCustomToppings();
-    // pizza.addCustomStyle();
-    // pizza.addCustomSize()
 
-    // pizza.addCustomStyle();
     console.log("saucecost------"+ pizza.sauceCost[pizza.sauce] + "      pizza size--"+pizza.sizeCost[pizza.size])
 
     var style = pizza.styleCost[pizza.style]
@@ -146,15 +67,6 @@ $(document).ready(function() {
     var size = pizza.sizeCost[pizza.size]
     var totalPrice = style + sauce + topping + size
     console.log(getStyleName+"-----style---"+style+ "sauce---"+sauce+ "topping---"+topping+ "size---"+size)
-
-    // var sauceTotal = pizza.findPrice(pizza.sauce,pizza.saucePrice);
-
-
-
-    // getPizzaPrice(pizza.size)
-
-
-
 
     $("#receipt").show();
     $("#submitButton").hide();
